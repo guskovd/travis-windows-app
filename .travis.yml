@@ -5,3 +5,4 @@ rust:
 deploy:
   provider: cargo
   token: $GITHUB_TOKEN
+  
