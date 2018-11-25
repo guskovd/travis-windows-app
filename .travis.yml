@@ -6,4 +6,9 @@ deploy:
   - provider: releases
     api-key: $GITHUB_TOKEN
     file: ./target/debug/travis-windows-app.exe
+    file_glob: true
+    file: dist/*
+    skip_cleanup: true
+    on:
+      tags: true
   
