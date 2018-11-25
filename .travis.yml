@@ -3,6 +3,7 @@ language: rust
 rust:
   - stable
 deploy:
-  provider: cargo
-  token: $GITHUB_TOKEN
+  - provider: releases
+    api-key: $GITHUB_TOKEN
+    file: ./target/debug/travis-windows-app.exe
   
