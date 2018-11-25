@@ -1,0 +1,6 @@
+[package]
+name = "travis-windows-app"
+version = "0.1.0"
+authors = ["Danil Guskov <d.guskov@corp.mail.ru>"]
+
+[dependencies]
