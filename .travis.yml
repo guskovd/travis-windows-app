@@ -2,3 +2,6 @@ os: windows
 language: rust
 rust:
   - stable
+deploy:
+  provider: cargo
+  token: $GITHUB_TOKEN
