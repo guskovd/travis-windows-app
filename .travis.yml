@@ -1,16 +1,19 @@
-os: windows
+os:
+  - windows
+  - linux
 language: rust
 rust:
   - stable
 
 script:
-  - cargo build
-  - cargo install --force
+  - cargo build --release
   
 deploy:
   - provider: releases
     api-key: $GITHUB_TOKEN
-    file: ./target/release/travis-windows-app.exe
+    file:
+      - ./target/release/travis-windows-app
+      - ./target/release/travis-windows-app.exe
     file_glob: true
     skip_cleanup: true
     on:
